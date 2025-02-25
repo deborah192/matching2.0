@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery Matching System</title>
+  <link rel="stylesheet" href="match.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Delivery Matching System</h1>
+    <div class="grid-layout">
+      <!-- Main Body -->
+      <div class="main-body">
+        <!-- Traveller Form -->
+        <section>
+          <h2>Create a Traveller</h2>
+          <form id="traveller-form">
+            <input type="text" id="traveller-name" placeholder="Name" required>
+            <input type="text" id="traveller-from" placeholder="From" required>
+            <input type="text" id="traveller-to" placeholder="To" required>
+            <input type="date" id="traveller-date" required>
+            <input type="number" id="traveller-space" placeholder="Available Space (kg)" required>
+            <button type="submit">Create Traveller</button>
+          </form>
+        </section>
+
+        <!-- Parcel Form -->
+        <section>
+          <h2>Create a Parcel</h2>
+          <form id="parcel-form">
+            <input type="text" id="parcel-from" placeholder="From" required>
+            <input type="text" id="parcel-to" placeholder="To" required>
+            <textarea id="parcel-description" placeholder="Description" required></textarea>
+            <input type="number" id="parcel-weight" placeholder="Weight (kg)" required>
+            <button type="submit">Find Match and Create Parcel</button>
+          </form>
+          <div id="match-section">
+            <h3 id="match-title" style="display: none;">FOUND MATCHES</h3>
+            <ul id="match-list"></ul>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Traveller List -->
+      <div class="list-container" id="traveller-list-container">
+        <h2>Traveller List</h2>
+        <ul id="traveller-list"></ul>
+      </div>
+
+      <!-- Parcel List -->
+      <div class="list-container" id="parcel-list-container">
+        <h2>Parcel List</h2>
+        <ul id="parcel-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="match.js"></script>
+</body>
+</html>
